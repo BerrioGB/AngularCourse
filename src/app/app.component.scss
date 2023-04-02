@@ -1,0 +1,67 @@
+.box{
+  height: 100px;
+  width: 100px;
+  overflow: auto;
+  background: red;
+}
+
+.movies--grid{
+  display: flex;
+  flex-direction: column;
+  div {
+    img{
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+    }
+    h2, p{
+      margin: 0;
+    }
+  }
+}
+
+.message-error{
+  background: red;
+  color: white;
+  opacity: 0;
+  transition: all linear .5s;
+  &.invalid {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .movies--grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 70px ;
+    div {
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+      h2, p{
+        margin: 0;
+      }
+  }
+
+}
+}
+
+.imagensa{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) ;
+}
+
+.line-error{
+  height: 0;
+  border-bottom: 1px solid;
+  &.invalid{
+    border-color: red;
+
+  }
+  &.valid{
+    border-color: green;
+  }
+}
