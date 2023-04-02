@@ -96,5 +96,8 @@ export class AppComponent {
   deleteName(index: number) {
     this.names.splice(index, 1)
   }
+  OnRegister(){
+    console.log(this.registro)
+  }
 
 }

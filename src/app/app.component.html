@@ -1,19 +1,19 @@
 <h1>Formulario Angular</h1>
-<form></form>
+<form (ngSubmit)="OnRegister()" #Form ="ngForm">
 <div class="input-group">
  <label for="name">Name</label>
- <input type="text" required id="name" [(ngModel)]="registro.name" />
+ <input type="text" name="name" required id="name" [(ngModel)]="registro.name" />
  <p>Error Message Name</p>
 </div>
-<form></form>
 <div class="input-group">
  <label for="email">Email</label>
- <input type="text" id="email" required [(ngModel)]="registro.email" />
+ <input type="text" name="email" id="email" required [(ngModel)]="registro.email" />
  <p>Error Message Email</p>
 </div>
-<form></form>
 <div class="input-group">
- <label for="password">Name</label>
- <input type="password" id="password" required [(ngModel)]="registro.password" />
+ <label for="password">Password</label>
+ <input type="password" name="password" id="password" required [(ngModel)]="registro.password" />
  <p>Error Message Password</p>
 </div>
+<button type="submit" [disabled]="Form.invalid">Registrar</button>
+</form>
